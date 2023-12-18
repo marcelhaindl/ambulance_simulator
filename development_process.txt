@@ -1,0 +1,48 @@
+---------------------------------------------------------------
+About my development process!
+---------------------------------------------------------------
+
+Game Description:
+    My game is an ambulance simulator (click-)game, that demonstrates a typical emergency at the ambulance.
+    You get an emergency, that you have to quit. On your way to the patient, you can decide which equipment you would like to take to
+    the emergency. At least 1 must be taken.
+    At the patient, you can click through the ABCDE Scheme to get to know more about the patients sufferings. You can measure all measurements,
+    considering the used equipment that you have taken with you. You can also give the patient oxygen and set the amount of oxygen, if you have
+    taken the oxybag with you. You can give medicine, if you have taken the ampoule with you. When you did at least 4 measurements, you are able to decide whether
+    you want to drive the patient to the hospital or try to save the patients live by giving him some medicine. The survival probability increases when the values are getting
+    better and decreases when the values are getting worse. 
+
+What was my goal?
+    ! My goal was to create a ambulance simulator (click-)game, that demonstrates a typical emergency at the ambulance
+    ! The player should get an emergency, decide which equipment he takes to the emergency,
+      he can ask the ABCDE Scheme and decide which measurements (considering the used equipment), oxygen and which medication he want to give the patient
+    ! The patient should the react to the medications, like in real life
+    ! The player should be able to drive the patient to the hospital
+    ! The patient should be able to survive or die the transport
+
+Why have I chosen this pathway?
+    ! Because I had an imagination of this game in my head and this was the only bullet point
+      that let me fulfill my game the way i wanted it to be
+
+
+What have been difficulties during development?
+    ! Staying organized and focused was one of the main problems of this project.
+    ! Since I programmed it during holidays, it was really hard for me to concentrate on this project for a certain amount of time.
+    ! Another problem was the organization of the json files. After implementing a few files, i completely lost the overview of all the files,
+      hence i started writing lots of comments to each file to achieve a better overview.
+
+What are my future ideas?
+    ! Implementing and improving few more features like 
+        - more usage of the backpack
+        - better medication affects (more realistic medication usage)
+        - improving the decision for living or dieing (implementing current health value and time to the hospital into the calculation)
+        - Improving the user interface design
+        - Adding a maximum value of oxygen (to mind its usage)
+        - more realistic timers and patient responses
+    ! Showing the result to my ambulance colleagues
+    ! And finally maybe implement it at the Red Cross, if they'd like to have it as a kind of learning / playing platform for future paramedics
+
+
+The reason why the language is german
+    - The language of the game is german, because i plan to present it to my colleagues at the red cross and maybe implement it as a learning / playing platform for future
+      paramedics after some improvements. 

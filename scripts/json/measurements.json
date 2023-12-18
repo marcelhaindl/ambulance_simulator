@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Atemfrequenz",
+        "unit": " pro Minute",
+        "range": 0,
+        "max": 20,
+        "min": 10,
+        "duration": 10,
+        "secondDuration": 10,
+        "changeBy": 0.5,
+        "equipmentNeeded": []
+    },
+    {
+        "name": "Herzfrequenz",
+        "unit": " pro Minute",
+        "range": 5,
+        "max": 100,
+        "min": 60,
+        "duration": 10,
+        "secondDuration": 0,
+        "changeBy": 3,
+        "equipmentNeeded": ["Rucksack", "Corpuls"]
+    },
+    {
+        "name": "Sauerstoffsättigung",
+        "unit": " %",
+        "range": 1,
+        "max": 100,
+        "min": 92,
+        "duration": 10,
+        "secondDuration": 0,
+        "changeBy": 0.5,
+        "equipmentNeeded": ["Rucksack", "Corpuls"]
+    },
+    {
+        "name": "Blutdruck",
+        "unit": " mmHg",
+        "range": 0,
+        "max": "140 / 100",
+        "min": "100 / 60",
+        "duration": 90,
+        "secondDuration": 45,
+        "changeBy": {
+            "systole": 1.8,
+            "diastole": 0.8
+        },
+        "equipmentNeeded": ["Rucksack", "Corpuls"]
+    },
+    {
+        "name": "Temperatur",
+        "unit": " °C",
+        "range": 0,
+        "max": 37.0,
+        "min": 36.0,
+        "duration": 20,
+        "secondDuration": 20,
+        "changeBy": 0.1,
+        "equipmentNeeded": ["Rucksack"]
+    },
+    {
+        "name": "Blutzucker",
+        "unit": " mg/dl",
+        "range": 0,
+        "max": 100,
+        "min": 60,
+        "duration": 80,
+        "secondDuration": 80,
+        "changeBy": 2,
+        "equipmentNeeded": ["Rucksack"]
+    },
+    {
+        "name": "EKG",
+        "unit": "",
+        "duration": 200,
+        "secondDuration": 45,
+        "equipmentNeeded": ["Corpuls"]
+    }    
+]

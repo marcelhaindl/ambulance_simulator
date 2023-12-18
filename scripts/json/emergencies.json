@@ -1,0 +1,669 @@
+{
+    "Herzinfarkt": {
+        "Name": "Herzinfarkt",
+        "Code": "RD-10D4",
+        "Beschreibung": "60j m A+ B+ Brustschmerzen-Kaltschweißig",
+        "initHealth": 70,
+        "painCounter": 80,
+        "vomitCounter": 0,
+        "auswirkungenMedikamente": {
+            "Adrenalin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesSmall, 15)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 10)",
+                "currentEmergency.changeEKG(measurementMap.get('EKG'), 5, 20)"
+            ],
+            "Atropin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesMiddle, 8)"
+            ],
+            "Diazepam": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)"
+            ],
+            "Diphenhydramin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesSmall, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesSmall, 10)"
+            ],
+            "Fentanyl": [
+                "currentEmergency.vomit(90)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 4, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)"
+            ],
+            "Glucose": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutzucker'), 100, changeTimesLarge, 5)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 15)"
+            ],
+            "Heparin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeEKG(measurementMap.get('EKG'), 90, 30)"
+            ],
+            "Lidocain": [
+                "currentEmergency.decreasePain(70, currentEmergency.painkiller.middle, 6, 30)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.vomit(50)"
+            ],
+            "Morphin": [
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 3, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.vomit(95)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)"
+            ],
+            "Naloxon": [
+                "currentEmergency.vomit(70)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 8, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesMiddle, 8)"
+            ],
+            "Salbutamol+Ipratropiumbromid": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesLarge, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 70, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 10)"
+            ]
+        },
+        "A": {
+            "Airway": {
+                "header": "Der Atemweg des Patienten wird überprüft",
+                "description": "Die Atemwege sind frei."
+            }
+        },
+        "B": {
+            "Breathing": {
+                "header": "Die Atmung des Patienten wird überprüft",
+                "description": "Die Atmung des Patienten ist unregelmäßig."
+            }
+        },
+        "C": {
+            "Circulation": {
+                "header": "Der Kreislauf des Patienten wird überprüft",
+                "description": "Der Puls ist peripher nur schwach tastbar. Seine Haut ist kaltschweißig"
+            }
+        },
+        "D": {
+            "Disability": {
+                "header": "ZOPS oder FAST",
+                "description": "Entscheide zwischen ZOPS und FAST",
+                "actions": {
+                    "ZOPS": {
+                        "Zeitlich": "Heute ist der ###.",
+                        "Örtlich": "Ich bin gerade zuhause.",
+                        "Persönlich": "Ich heiße Harald und bin 60 Jahre alt.",
+                        "Situation": "Ich habe die Rettung gerufen weil ich so starke Brustschmerzen habe."
+                    },
+                    "FAST": {
+                        "Face": "Der Patient zeit hier keine Auffälligkeiten.",
+                        "Arms": "Der Patient zeit hier keine Auffälligkeiten.",
+                        "Speech": "Der Patient zeit hier keine Auffälligkeiten.",
+                        "Time": "Der Patient zeit hier keine Auffälligkeiten."
+                    }
+                }
+            }
+        },
+        "E": {
+            "Exposure": {
+                "header": "SAMPLER oder 7-Zwerge",
+                "description": "Entscheide zwischen SAMPLER und 7-Zwerge",
+                "actions": {
+                    "SAMPLER": {
+                        "Symptome": "Ich habe starke Brustschmerzen und mir ist etwas schlecht.",
+                        "Allergien": "Puh... Nicht dass ich wüsste.",
+                        "Medikamente": "Ja, ich nehme Aspirin und Blutdrucksenker.",
+                        "Personengeschichte": "Ich hatte vor etwa 5 Jahren einen Herzinfarkt.",
+                        "Letzte Einnahmen": "Ich habe vor etwa 2 Stunden gefrühstückt.",
+                        "Ereignis": "Ich stand in der Küche, als ich plötzlich so ein starkes Stechen in der Brust bekam.",
+                        "Risikofaktoren": "Ich rauche und habe normalerweise ziemlich hohen Blutdruck."
+                    },
+                    "7-Zwerge": {
+                        "Atemfrequenz": 23,
+                        "Herzfrequenz": 120,
+                        "Sauerstoffsättigung": 92,
+                        "Blutdruck": "180 / 100",
+                        "Temperatur": 37.5,
+                        "Blutzucker": 180,
+                        "EKG": "Ungewöhnliche Muster"
+                    }
+                }
+            }
+        }
+    },
+    "Schlaganfall": {
+        "Name": "Schlaganfall",
+        "Code": "RD-18C0C",
+        "Beschreibung": "75j w A+ B+ Akuter Sprachverlust und Schwindel",
+        "initHealth": 60,
+        "painCounter": 0,
+        "vomitCounter": 0,
+        "auswirkungenMedikamente": {
+            "Adrenalin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesSmall, 15)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 10)"
+            ],
+            "Atropin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesMiddle, 8)"
+            ],
+            "Diazepam": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)"
+            ],
+            "Diphenhydramin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesSmall, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesSmall, 10)"
+            ],
+            "Fentanyl": [
+                "currentEmergency.vomit(90)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 4, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)"
+            ],
+            "Glucose": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutzucker'), 100, changeTimesLarge, 5)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 15)"
+            ],
+            "Heparin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)"
+            ],
+            "Lidocain": [
+                "currentEmergency.decreasePain(70, currentEmergency.painkiller.middle, 6, 30)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.vomit(50)"
+            ],
+            "Morphin": [
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 3, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.vomit(95)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)"
+            ],
+            "Naloxon": [
+                "currentEmergency.vomit(70)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 8, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesMiddle, 8)"
+            ],
+            "Salbutamol+Ipratropiumbromid": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesLarge, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 70, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 10)"
+            ]
+        },
+        "A": {
+            "Airway": {
+                "header": "Der Atemweg des Patienten wird überprüft",
+                "description": "Die Atemwege sind frei."
+            }
+        },
+        "B": {
+            "Breathing": {
+                "header": "Die Atmung des Patienten wird überprüft",
+                "description": "Die Atmung des Patienten ist regelmäßig."
+            }
+        },
+        "C": {
+            "Circulation": {
+                "header": "Der Kreislauf des Patienten wird überprüft",
+                "description": "Der Puls ist peripher normal tastbar."
+            }
+        },
+        "D": {
+            "Disability": {
+                "header": "ZOPS oder FAST",
+                "description": "Entscheide zwischen ZOPS und FAST",
+                "actions": {
+                    "ZOPS": {
+                        "Zeitlich": "Heute ist der ###.",
+                        "Örtlich": "Ich bin zuhause.",
+                        "Persönlich": "Meine Mutter ist 75 Jahre alt und hat Bluthochdruck.",
+                        "Situation": "Meine Mutter kann plötzlich nicht mehr richtig sprechen und hat Schwindelgefühle."
+                    },
+                    "FAST": {
+                        "Face": "Die Mundwinkel hängen leicht herab.",
+                        "Arms": "Die Arme der Patientin sind schwach auf einer Seite.",
+                        "Speech": "Die Patientin hat Schwierigkeiten zu sprechen.",
+                        "Time": "Die Symptome haben vor etwa 30 Minuten begonnen."
+                    }
+                }
+            }
+        },
+        "E": {
+            "Exposure": {
+                "header": "SAMPLER oder 7-Zwerge",
+                "description": "Entscheide zwischen SAMPLER und 7-Zwerge",
+                "actions": {
+                    "SAMPLER": {
+                        "Symptome": "Meine Mutter hat plötzlich Sprachstörungen und Schwindelgefühle.",
+                        "Allergien": "Meine Mutter hat keine bekannten Allergien.",
+                        "Medikamente": "Meine Mutter nimmt Blutdrucksenker.",
+                        "Personengeschichte": "Meine Mutter hatte vor einigen Jahren schon einmal einen Schlaganfall.",
+                        "Letzte Einnahmen": "Meine Mutter hat heute Morgen normal gefrühstückt.",
+                        "Ereignis": "Meine Mutter saß gerade am Tisch, als sie plötzlich ihre Worte nicht mehr finden konnte und Schwindel bekam.",
+                        "Risikofaktoren": "Meine Mutter hat Bluthochdruck und raucht."
+                    },
+                    "7-Zwerge": {
+                        "Atemfrequenz": 18,
+                        "Herzfrequenz": 85,
+                        "Sauerstoffsättigung": 98,
+                        "Blutdruck": "150 / 90",
+                        "Temperatur": 36.9,
+                        "Blutzucker": 130,
+                        "EKG": "Normaler Sinusrhythmus"
+                    }
+                }
+            }
+        }
+    },
+    "Hypotonie": {
+        "Name": "Hypotonie",
+        "Code": "RD-26A2",
+        "Beschreibung": "30j w A+ B~ Ohnmacht-Schwächegefühl",
+        "initHealth": 80,
+        "painCounter": 0,
+        "vomitCounter": 0,
+        "auswirkungenMedikamente": {
+            "Adrenalin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesSmall, 15)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 10)"
+            ],
+            "Atropin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesMiddle, 8)"
+            ],
+            "Diazepam": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)"
+            ],
+            "Diphenhydramin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesSmall, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesSmall, 10)"
+            ],
+            "Fentanyl": [
+                "currentEmergency.vomit(90)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 4, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)"
+            ],
+            "Glucose": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutzucker'), 100, changeTimesLarge, 5)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 15)"
+            ],
+            "Heparin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)"
+            ],
+            "Lidocain": [
+                "currentEmergency.decreasePain(70, currentEmergency.painkiller.middle, 6, 30)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.vomit(50)"
+            ],
+            "Morphin": [
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 3, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.vomit(95)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)"
+            ],
+            "Naloxon": [
+                "currentEmergency.vomit(70)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 8, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesMiddle, 8)"
+            ],
+            "Salbutamol+Ipratropiumbromid": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesLarge, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 70, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 10)"
+            ]
+        },
+        "A": {
+            "Airway": {
+                "header": "Der Atemweg des Patienten wird überprüft",
+                "description": "Die Atemwege sind frei."
+            }
+        },
+        "B": {
+            "Breathing": {
+                "header": "Die Atmung des Patienten wird überprüft",
+                "description": "Der Patient atmet flach und schnell."
+            }
+        },
+        "C": {
+            "Circulation": {
+                "header": "Der Kreislauf des Patienten wird überprüft",
+                "description": "Der Puls ist schnell und schwach."
+            }
+        },
+        "D": {
+            "Disability": {
+                "header": "ZOPS oder FAST",
+                "description": "Entscheide zwischen ZOPS und FAST",
+                "actions": {
+                    "ZOPS": {
+                        "Zeitlich": "Heute ist der ###.",
+                        "Örtlich": "Ich befinde mich im Büro.",
+                        "Persönlich": "Ich heiße Anna und bin 30 Jahre alt.",
+                        "Situation": "Ich bin ohnmächtig geworden und habe mich danach sehr schwach gefühlt."
+                    },
+                    "FAST": {
+                        "Face": "Der Patient zeigt keine Auffälligkeiten.",
+                        "Arms": "Der Patient zeigt keine Auffälligkeiten.",
+                        "Speech": "Der Patient zeigt keine Auffälligkeiten.",
+                        "Time": "Der Patient zeigt keine Auffälligkeiten."
+                    }
+                }
+            }
+        },
+        "E": {
+            "Exposure": {
+                "header": "SAMPLER oder 7-Zwerge",
+                "description": "Entscheide zwischen SAMPLER und 7-Zwerge",
+                "actions": {
+                    "SAMPLER": {
+                        "Symptome": "Ich fühle mich sehr schwach und schwindelig. Ich bin auch ohnmächtig geworden.",
+                        "Allergien": "Ich bin nicht allergisch gegen irgendwelche Medikamente.",
+                        "Medikamente": "Ich nehme keine Medikamente.",
+                        "Personengeschichte": "Ich habe in der Vergangenheit nie ähnliche Symptome gehabt.",
+                        "Letzte Einnahmen": "Ich habe vor etwa 2 Stunden gegessen.",
+                        "Ereignis": "Ich war gerade am Arbeiten, als ich plötzlich Schwindelgefühle bekam und umgefallen bin.",
+                        "Risikofaktoren": "Ich habe keine bekannten Risikofaktoren."
+                    },
+                    "7-Zwerge": {
+                        "Atemfrequenz": 18,
+                        "Herzfrequenz": 120,
+                        "Sauerstoffsättigung": 94,
+                        "Blutdruck": "90 / 60",
+                        "Temperatur": 37.2,
+                        "Blutzucker": 110,
+                        "EKG": "Normaler Sinusrhythmus"
+                    }
+                }
+            }
+        }
+    },
+    "Hypoglykämie": {
+        "Name": "Hypoglykämie",
+        "Code": "RD-6D4",
+        "Beschreibung": "35j w B+ kalter Schweiß und Zittern",
+        "initHealth": 60,
+        "painCounter": 20,
+        "vomitCounter": 0,
+        "auswirkungenMedikamente": {
+            "Adrenalin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesSmall, 15)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 10)"
+            ],
+            "Atropin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesMiddle, 8)"
+            ],
+            "Diazepam": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)"
+            ],
+            "Diphenhydramin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesSmall, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesSmall, 10)"
+            ],
+            "Fentanyl": [
+                "currentEmergency.vomit(90)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 4, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)"
+            ],
+            "Glucose": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutzucker'), 100, changeTimesLarge, 5)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 15)"
+            ],
+            "Heparin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)"
+            ],
+            "Lidocain": [
+                "currentEmergency.decreasePain(70, currentEmergency.painkiller.middle, 6, 30)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.vomit(50)"
+            ],
+            "Morphin": [
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 3, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.vomit(95)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)"
+            ],
+            "Naloxon": [
+                "currentEmergency.vomit(70)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 8, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesMiddle, 8)"
+            ],
+            "Salbutamol+Ipratropiumbromid": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesLarge, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 70, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 10)"
+            ]
+        },
+        "A": {
+            "Airway": {
+                "header": "Der Atemweg der Patientin wird überprüft",
+                "description": "Die Atemwege sind frei."
+            }
+        },
+        "B": {
+            "Breathing": {
+                "header": "Die Atmung der Patientin wird überprüft",
+                "description": "Die Atmung der Patientin ist normal."
+            }
+        },
+        "C": {
+            "Circulation": {
+                "header": "Der Kreislauf der Patientin wird überprüft",
+                "description": "Der Puls ist schnell und schwach tastbar."
+            }
+        },
+        "D": {
+            "Disability": {
+                "header": "ZOPS oder FAST",
+                "description": "Entscheide zwischen ZOPS und FAST",
+                "actions": {
+                    "ZOPS": {
+                        "Zeitlich": "Heute ist der ###.",
+                        "Örtlich": "Ich bin gerade im Büro.",
+                        "Persönlich": "Ich heiße Marie und bin 35 Jahre alt.",
+                        "Situation": "Ich habe die Rettung gerufen, weil ich kalten Schweiß habe und zittere."
+                    },
+                    "FAST": {
+                        "Face": "Die Patientin zeigt keine Auffälligkeiten.",
+                        "Arms": "Die Patientin zeigt keine Auffälligkeiten.",
+                        "Speech": "Die Patientin zeigt keine Auffälligkeiten.",
+                        "Time": "Die Patientin zeigt keine Auffälligkeiten."
+                    }
+                }
+            }
+        },
+        "E": {
+            "Exposure": {
+                "header": "SAMPLER oder 7-Zwerge",
+                "description": "Entscheide zwischen SAMPLER und 7-Zwerge",
+                "actions": {
+                    "SAMPLER": {
+                        "Symptome": "Ich habe kalten Schweiß, Zittern, Herzklopfen und fühle mich schwach.",
+                        "Allergien": "Ich habe keine bekannten Allergien.",
+                        "Medikamente": "Ich nehme keine Medikamente.",
+                        "Personengeschichte": "Ich habe Diabetes Typ 1.",
+                        "Letzte Einnahmen": "Ich habe vor etwa 3 Stunden Mittagessen gegessen.",
+                        "Ereignis": "Ich habe einfach so plötzlich diese Symptome bekommen.",
+                        "Risikofaktoren": "Ich habe Diabetes Typ 1."
+                    },
+                    "7-Zwerge": {
+                        "Atemfrequenz": 16,
+                        "Herzfrequenz": 90,
+                        "Sauerstoffsättigung": 96,
+                        "Blutdruck": "90 / 60",
+                        "Temperatur": 36.8,
+                        "Blutzucker": 50,
+                        "EKG": "Normaler Sinusrhythmus"
+                    }
+                }
+            }
+        }
+    },
+    "Rückenschmerzen": {
+        "Name": "Rückenschmerzen",
+        "Code": "RD-5C0",
+        "Beschreibung": "30j w A+ B+ Rückenschmerzen",
+        "initHealth": 85,
+        "painCounter": 100,
+        "vomitCounter": 0,
+        "auswirkungenMedikamente": {
+            "Adrenalin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesSmall, 15)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 10)"
+            ],
+            "Atropin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 100, changeTimesMiddle, 8)"
+            ],
+            "Diazepam": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)"
+            ],
+            "Diphenhydramin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesSmall, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesSmall, 10)"
+            ],
+            "Fentanyl": [
+                "currentEmergency.vomit(90)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 4, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)"
+            ],
+            "Glucose": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutzucker'), 100, changeTimesLarge, 5)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesSmall, 15)"
+            ],
+            "Heparin": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesMiddle, 8)"
+            ],
+            "Lidocain": [
+                "currentEmergency.decreasePain(70, currentEmergency.painkiller.middle, 6, 30)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 0, changeTimesMiddle, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 8)",
+                "currentEmergency.vomit(50)"
+            ],
+            "Morphin": [
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 3, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 0, changeTimesMiddle, 10)",
+                "currentEmergency.vomit(95)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)"
+            ],
+            "Naloxon": [
+                "currentEmergency.vomit(70)",
+                "currentEmergency.decreasePain(100, currentEmergency.painkiller.heavy, 8, 20)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 0, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 100, changeTimesLarge, 8)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesMiddle, 8)"
+            ],
+            "Salbutamol+Ipratropiumbromid": [
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Sauerstoffsättigung'), 100, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Atemfrequenz'), 100, changeTimesLarge, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Herzfrequenz'), 70, changeTimesMiddle, 10)",
+                "currentEmergency.changeMeasurementMedication(measurementMap.get('Blutdruck'), 50, changeTimesMiddle, 10)"
+            ]
+        },
+        "A": {
+            "Airway": {
+                "header": "Der Atemweg des Patienten wird überprüft",
+                "description": "Die Atemwege sind frei."
+            }
+        },
+        "B": {
+            "Breathing": {
+                "header": "Die Atmung des Patienten wird überprüft",
+                "description": "Die Atmung des Patienten ist unauffällig."
+            }
+        },
+        "C": {
+            "Circulation": {
+                "header": "Der Kreislauf des Patienten wird überprüft",
+                "description": "Der Puls ist regelmäßig und kräftig."
+            }
+        },
+        "D": {
+            "Disability": {
+                "header": "ZOPS oder FAST",
+                "description": "Entscheide zwischen ZOPS und FAST",
+                "actions": {
+                    "ZOPS": {
+                        "Zeitlich": "Heute ist der ###.",
+                        "Örtlich": "Ich bin zuhause.",
+                        "Persönlich": "Ich heiße Anna und bin 30 Jahre alt.",
+                        "Situation": "Ich habe Rückenschmerzen."
+                    },
+                    "FAST": {
+                        "Face": "Der Patient zeigt keine Auffälligkeiten.",
+                        "Arms": "Der Patient zeigt keine Auffälligkeiten.",
+                        "Speech": "Der Patient zeigt keine Auffälligkeiten.",
+                        "Time": "Der Patient zeigt keine Auffälligkeiten."
+                    }
+                }
+            }
+        },
+        "E": {
+            "Exposure": {
+                "header": "SAMPLER oder 7-Zwerge",
+                "description": "Entscheide zwischen SAMPLER und 7-Zwerge",
+                "actions": {
+                    "SAMPLER": {
+                        "Symptome": "Ich habe seit einigen Stunden Schmerzen im unteren Rückenbereich.",
+                        "Allergien": "Nicht dass ich wüsste.",
+                        "Medikamente": "Ich nehme keine regelmäßigen Medikamente.",
+                        "Personengeschichte": "Ich habe keine bekannten Vorerkrankungen oder Verletzungen.",
+                        "Letzte Einnahmen": "Ich habe vor etwa 3 Stunden eine Mahlzeit zu mir genommen.",
+                        "Ereignis": "Ich habe nichts Besonderes gemacht, als die Schmerzen aufgetreten sind.",
+                        "Risikofaktoren": "Ich habe keine bekannten Risikofaktoren."
+                    },
+                    "7-Zwerge": {
+                        "Atemfrequenz": 16,
+                        "Herzfrequenz": 90,
+                        "Sauerstoffsättigung": 98,
+                        "Blutdruck": "120 / 80",
+                        "Temperatur": 37.0,
+                        "Blutzucker": 95,
+                        "EKG": "Normaler Sinusrhythmus"
+                    }
+                }
+            }
+        }
+    }
+}

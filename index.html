@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Semantic UI -->
+    <link rel="stylesheet" href="./styles/semantic/semantic.min.css">
+    <script src="./styles/semantic/semantic.min.js"></script>
+    <!-- My Styles -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <title>Ambulance</title>
+</head>
+
+<body>
+    <!-- Information -->
+    <div id="information">
+        <!-- Status and Emergency and Oxygen -->
+        <div id="status-and-emergency-and-oxygen">
+            <!-- Status and Emergency -->
+            <div id="status-and-emergency">
+                <!-- Status -->
+                <div id="status">
+                    <i id="status-icon" class="circular phone volume green icon"></i>
+                    <h1 id="status-text" class="ui center aligned tiny icon header">Frei Wache</h1>
+                    <p id="status-sub-text" class="sub header">Status 1</p>
+                </div>
+                <!-- Emergency Information -->
+                <div id="emergency-information" style="display: none">
+                    <i id="emergency-information-icon" class="circular user grey icon"></i>
+                    <h1 id="emergency-information-code" class="ui center aligned tiny icon header">Code</h1>
+                    <p id="emergency-information-description" class="sub header">Notfallbeschreibung</p>
+                </div>
+            </div>
+            <div id="drive-and-oxygen">
+                <!-- Drive to hospital -->
+                <div id="drive" style="display: none">
+                    <i id="drive-icon" class="circular ambulance red icon"></i>
+                    <button id="drive-btn" class="ui red fluid button">Abstransport</button>
+                </div>
+                <!-- Oxygen -->
+                <div id="oxygen" style="display: none">
+
+                    <div id="oxygen-regulator">
+
+                        <button id="oxygen-minus" class="ui icon red button">
+                            <i class="minus icon"></i>
+                        </button>
+                        <div class="ui small statistic">
+                            <div id="oxygen-value" class="value">
+                                0
+                            </div>
+                            <div id="oxygen-label" class="label">
+                                l / min
+                            </div>
+                        </div>
+                        <button id="oxygen-plus" class="ui icon green button">
+                            <i class="plus icon"></i>
+                        </button>
+                    </div>
+                    <button id="oxygen-btn" class="ui grey fluid button">Sauerstoff AN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Measurements -->
+        <div id="measurements-and-pain-vomit-counter">
+            <div id="measurements">
+            </div>
+            <div id="pain-vomit-counter">
+                <div id="vomit-counter" style="display: none;">
+                    <h1 id="vomit-counter-value" class="measurement-value ui center aligned tiny icon header">0</h1>
+                    <p class="measurement-name sub header">Übergeben-Skala</p>
+                    <p class="measurement-borders sub header">(0 - 100)</p>
+                </div>
+                <div id="pain-counter" style="display: none;">
+                    <h1 id="pain-counter-value" class="measurement-value ui center aligned tiny icon header">0</h1>
+                    <p class="measurement-name sub header">Schmerz-Skala</p>
+                    <p class="measurement-borders sub header">(0 - 100)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Information -->
+    <div id="popup-drive" class="ui medium modal">
+        <div id="popup-drive-header" class="header">
+            Abtransport
+        </div>
+        <div class="image content">
+            <div id="popup-drive-image-container" class="ui tiny image">
+                <img id="popup-drive-image" src="/images/illustrations/ambulance.png">
+            </div>
+            <div class="space-between">
+                <div id="popup-drive-description" class="description">
+                    <div id="popup-drive-description-header" class="ui header">Beim Abtransport hat der Patient eine Überlebenschance von X%</div>
+                    <p id="popup-drive-description-text">Möchtest du fortfahren?</p>
+                </div>
+            </div>
+        </div>
+        <div id="popup-drive-actions" class="actions">
+            <button id="popup-drive-btn1" class="ui left aligned green button" style="display: inline;">Fortfahren</button>
+
+            <div class="ui ok right labeled icon button">
+                Abbrechen
+                <i class="close icon"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Popup Vomit -->
+    <div id="popup-vomit" class="ui medium modal">
+        <div id="popup-vomit-header" class="header">
+            Es scheint als hätte sich dein Patient übergeben
+        </div>
+        <div class="image content">
+            <div id="popup-vomit-image-container" class="ui tiny image">
+                <img id="popup-vomit-image" src="/images/illustrations/patient/vomit.png">
+            </div>
+            <div class="space-between">
+                <div id="popup-vomit-description" class="description">
+                    <div id="popup-vomit-description-header" class="ui header">Jetzt liegt es an dir!</div>
+                    <p id="popup-vomit-description-text">Wähle eine der unten angeführten Aktionen, um dem Patienten vor
+                        einer möglichen Erstickung zu bewahren.</p>
+                </div>
+            </div>
+        </div>
+        <div id="popup-vomit-actions" class="actions">
+            <button id="popup-vomit-btn1" class="ui left aligned teal button" style="display: none;">Absaugen</button>
+            <button id="popup-vomit-btn2" class="ui left aligned olive button" style="display: inline;">Kopf
+                drehen</button>
+
+            <div class="ui ok right labeled icon button">
+                Abwarten
+                <i class="clock icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Information -->
+    <div id="popup" class="ui medium modal">
+        <div id="popup-header" class="header">
+            [A] ... Airway
+        </div>
+        <div class="image content">
+            <div id="popup-image-container" class="ui tiny image">
+                <img id="popup-image" src="/images/illustrations/patient/fever_1.png">
+            </div>
+            <div class="space-between">
+                <div id="popup-description" class="description">
+                    <div id="popup-description-header" class="ui header">Du überprüfst die Atemwege des Patienten</div>
+                    <p id="popup-description-text">Seine Atemwege sind frei.</p>
+                </div>
+                <div id="popup-hover-btns" style="display: none"></div>
+            </div>
+        </div>
+        <div id="popup-actions" class="actions">
+            <button id="popup-btn1" class="ui left aligned orange button" style="display: none;">ZOPS</button>
+            <button id="popup-btn2" class="ui left aligned red button" style="display: none;">FAST</button>
+            <button id="popup-btn3" class="ui left aligned green button" style="display: none">Messung
+                durchführen</button>
+
+            <div class="ui ok right labeled icon button">
+                Schließen
+                <i class="close icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Medication -->
+    <div id="popup-medication" class="ui large modal">
+        <div id="popup-medication-header" class="header">
+            Ampullarium
+        </div>
+        <div class="image scrolling content">
+            <div id="popup-medication-image-container" class="ui small image">
+                <img id="popup-medication-image" src="./images/equipment/ampullarium.jpg">
+            </div>
+            <div class="space-between">
+                <div id="popup-medication-description" class="description">
+                    <div id="popup-medication-description-header" class="ui header">Medikamenteninformation</div>
+                    <h5>Wirkstoff(e)</h5>
+                    <ul id="popup-medication-wirkstoffe">
+                        <li>Für genauere Informationen, wähle ein Medikament.</li>
+                    </ul>
+                    <h5>mögliche Auswirkung(en)</h5>
+                    <ul id="popup-medication-auswirkungen">
+                        <li>Für genauere Informationen, wähle ein Medikament.</li>
+                    </ul>
+                    <h5>mögliche Nebenwirkung(en)</h5>
+                    <ul id="popup-medication-nebenwirkungen">
+                        <li>Für genauere Informationen, wähle ein Medikament.</li>
+                    </ul>
+                    <h5>Indikation(en)</h5>
+                    <ul id="popup-medication-indikationen">
+                        <li>Für genauere Informationen, wähle ein Medikament.</li>
+                    </ul>
+                    <h5>Kontraindikation(en)</h5>
+                    <ul id="popup-medication-kontraindikationen">
+                        <li>Für genauere Informationen, wähle ein Medikament.</li>
+                    </ul>
+                </div>
+                <div id="popup-medication-hover-btns"></div>
+            </div>
+        </div>
+        <div id="popup-medication-actions" class="actions">
+            <button id="popup-medication-btn" class="ui left aligned orange button" style="display: none;">Medikament
+                verabreichen</button>
+            <div id="popup-medication-warning-message" class="ui right pointing red basic label" style="display: none">
+                Die Wirkung eines anderen Medikaments wird noch abgewartet! Willst du überspringen?
+            </div>
+            <button id="popup-medication-skip-btn" class="ui left aligned green button"
+                style="display: none;">Überspringen</button>
+
+            <div class="ui ok right labeled icon button">
+                Schließen
+                <i class="close icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="start-screen" style="display: flex;">
+        <img src="images/illustrations/medical-app.png" width="250px">
+        <h1 id="header">Ambulance</h1>
+        <p id="subheader">Ein Spiel von Marcel Haindl</p>
+        </h1>
+        <button id="start" class="ui big fluid red button">Start</button>
+    </div>
+
+    <!-- Game Area -->
+    <div id="game-area" style="display: none;">
+
+        <!-- Phone -->
+        <div id="phone">
+            <div id="emergency-description">
+                <i class="circular  user huge blue icon"></i>
+                <h1 id="code" class="ui header">Code</h1>
+                <p id="description" class="sub header">Einsatzbeschreibung</p>
+            </div>
+            <button id="quittieren" class="ui fluid big red button">Alarm quittieren</button>
+        </div>
+
+        <!-- While Driving -->
+        <div id="while-driving">
+            <!-- Equipment -->
+            <div id="equipment-container">
+                <div class="ui horizontal divider">
+                    <h2>Welche Geräte nimmst du zum Patienten mit?</h2>
+                </div>
+                <p id="min-equipment" style="display: none;">* Mindestens 1 Gerät auswählen *</p>
+
+                <div id="equipment">
+                    <!-- Image List -->
+                </div>
+                <button id="next" class="ui fluid big red button">Weiter</button>
+            </div>
+        </div>
+
+        <!-- At the patient -->
+        <div id="at-the-patient">
+            <div id="health-bar-container">
+                <div id="health-bar"></div>
+            </div>
+            <img id="patient" src="./images/illustrations/patient/ill.png">
+            <div class="ui horizontal divider">
+                <h2>ABCDE - Schema</h2>
+            </div>
+            <div id="abcde-btns">
+                <button id="airway" class="abcde-btn">Airway</button>
+                <button id="breathing" class="abcde-btn">Breathing</button>
+                <button id="circulation" class="abcde-btn">Circulation</button>
+                <button id="disability" class="abcde-btn">Disability</button>
+                <button id="exposure" class="abcde-btn">Exposure</button>
+            </div>
+            <div id="medical-btns">
+                <button id="give-medicine" class="ui fluid big orange button" style="display: none;">Ampullarium
+                    öffnen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Died Screen -->
+    <div id="died-screen" style="display: none;">
+        <img src="images/illustrations/skull.png" width="250px">
+        <h1 id="header-died-screen">Patient verstorben</h1>
+        <p id="subheader-died-screen">Leider ist dein Patient aufgrund seiner Erkrankung gestorben!</p>
+        </h1>
+        <button id="retry-died" class="ui big fluid red button">Erneut spielen</button>
+    </div>
+
+    <!-- Survived Screen -->
+    <div id="survived-screen" style="display: none;">
+        <img src="images/illustrations/hospital.png" width="250px">
+        <h1 id="header-survived-screen">Patient überlebt</h1>
+        <p id="subheader-survived-screen">Du hast deinen Patienten erfolgreich ins Krankenhaus tranportiert! Gratuliere!</p>
+        </h1>
+        <button id="retry-survived" class="ui big fluid green button">Erneut spielen</button>
+    </div>
+
+    <script type="module" src="./scripts/game.js"></script>
+</body>
+
+</html>

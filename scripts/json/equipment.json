@@ -1,0 +1,22 @@
+{
+    "Rucksack": {
+        "name": "Rucksack",
+        "image": "./images/equipment/rucksack.jpg"
+    },
+    "Corpuls": {
+        "name": "Corpuls",
+        "image": "./images/equipment/corpuls.jpg"
+    },
+    "Sauerstofftasche": {
+        "name": "Sauerstofftasche",
+        "image": "./images/equipment/oxybag.jpg"
+    },
+    "Absaugeinheit": {
+        "name": "Absaugeinheit",
+        "image": "./images/equipment/absaugeinheit.jpg"
+    },
+    "Ampullarium": {
+        "name": "Ampullarium",
+        "image": "./images/equipment/ampullarium.jpg"
+    }
+}

@@ -1,0 +1,380 @@
+[
+    {
+        "name": "Adrenalin",
+        "wirkstoffe": [
+            "Sympathomimetikum",
+            "Katecholamin"
+        ],
+        "indikationen": [
+            "Atem-Kreislaufstillstand",
+            "Anaphylaxie",
+            "Atemwegsobstruktion",
+            "kardiogener Schock",
+            "Bradykardie"
+        ],
+        "kontraindikationen": [
+            "im Notfall keine"
+        ],
+        "auswirkungen": [
+            "erhöhte Herzfrequenz und Blutdruck",
+            "erweiterte Atemwege",
+            "erhöhte Blutzuckerspiegel",
+            "erhöhte Muskelkraft und Ausdauer",
+            "erhöhte Wachsamkeit und Konzentration",
+            "erweiterte Pupillen"
+        ],
+        "nebenwirkungen": [
+            "Im Notfall sind die Nebenwirkungen irrelevant und dauern nur kurz - das Arzneimittel ist hochpotent und muss korrekt dosiert werden. Die Nebenwirkungen werden zum Teil für den Erfolg bei der Reanimation genutzt (z.B. Blutdrucksteigerung)"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Atropin",
+        "wirkstoffe": [
+            "Anticholinergikum",
+            "Parasympatholytikum"
+        ],
+        "indikationen": [
+            "akut auftretende bradykarde Herzrhythmusstörungen",
+            "Antidot bei Vergiftungen mit Organophosphaten",
+            "Antidot bei Vergiftungen mit Parasympathomimetika"
+        ],
+        "kontraindikationen": [
+            "Überempfindlichkeit gegenüber Atropin oder sonstige Bestandteile",
+            "Myasthenia Gravis",
+            "Engwinkelglaukom",
+            "Tachyarrhythmie und Vorhofflimmern",
+            "Koronare Herzkrankheit",
+            "Mechanische Verschlüsse des Magen-Darm-Traktes",
+            "obstruktive Harnwegserkrankung"
+        ],
+        "auswirkungen": [
+            "erhöhte Herzfrequenz",
+            "verminderte Sekretion von Speichel und Schweiß",
+            "erweiterte Pupillen",
+            "verminderte Darmmotilität",
+            "verminderte Sekretion von Verdauungsenzymen",
+            "verminderte Sekretion von Magensäure"
+        ],
+        "nebenwirkungen": [
+            "Tachykardie (supraventrikulär und ventrikulär)",
+            "Verlängerung der Überleitungszeit ab AV Block 2b",
+            "Augeninnendrucksteigerung (Glaukomanfall) und damit verbunden Sehstörungen",
+            "Schluck-und Sprachstörungen",
+            "Psychische Veränderungen (Unruhe- und Erregungszustände, Halluzinationen)",
+            "Anaphylaktischer Schock",
+            "Anstieg der Körpertemperatur (Atropinfieber)",
+            "Mundtrockenheit, Verwirrtheit, Krämpfe",
+            "Hypertonie",
+            "Muskelschwäche und Koordinationsstörungen",
+            "selten: Auslösung eines Angina Pectoris Anfalls"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Diazepam",
+        "wirkstoffe": [
+            "Benzodiazepin"
+        ],
+        "indikationen": [
+            "zerebraler Krampfanfall"
+        ],
+        "kontraindikationen": [
+            "Überempfindlichkeit gegen Benzodiazepine oder sonstige Bestandteile",
+            "unter 1 Jahr",
+            "Cave: Alkohol verstärkt die Wirkung"
+        ],
+        "auswirkungen": [
+            "Muskelentspannung",
+            "Verminderte Angst- und Spannungszustände",
+            "Schlafanstoßung",
+            "Erhöhte Anfallschwelle",
+            "Erhöhte Wirkung von GABA, einem beruhigenden Neurotransmitter im Gehirn",
+            "Verminderte Aufmerksamkeit und Reaktionszeit"
+        ],
+        "nebenwirkungen": [
+            "Atemdepression",
+            "Atemstillstand",
+            "Müdigkeit",
+            "Schläfrigkeit",
+            "Mattigkeit",
+            "paradoxe Reaktionen (z. B. akute Erregungszustände, Wutanfälle)",
+            "Blutdruckabfall",
+            "Bradykardie"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Diphenhydramin",
+        "wirkstoffe": [
+            "Antihistaminikum (H1-Blocker)"
+        ],
+        "indikationen": [
+            "Anaphylaxie"
+        ],
+        "kontraindikationen": [
+            "Unverträglichkeit gegenüber dem Wirkstoff",
+            "Kinder <18 kg Körpergewicht",
+            "Epilepsie",
+            "Engwinkel-Glaukom(Grüner Star)",
+            "Akuter Asthmaanfall",
+            "Schwangerschaft und Stillzeit"
+        ],
+        "auswirkungen": [
+            "verminderte allergische Reaktionen",
+            "Schlafanstoßung",
+            "Müdigkeit und Schläfrigkeit",
+            "verminderte Wachsamkeit und Konzentration",
+            "verminderte Koordination und Reaktionszeit",
+            "verminderte Speichelsekretion und Schleimproduktion"
+        ],
+        "nebenwirkungen": [
+            "ZNS-Dämpfung mit starker Sedierung (v.a. Müdigkeit)",
+            "anticholinerg (Mundtrockenheit, Tachykardie, Mydriasis)",
+            "Gastrointestinale Beschwerden",
+            "Epileptischer Anfall",
+            "Herzrhythmusstörungen",
+            "Blutdruckabfall ",
+            "allergische Hautreaktionen"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Fentanyl",
+        "wirkstoffe": [
+            "Opioid-Analgetikum"
+        ],
+        "indikationen": [
+            "starke Schmerzen"
+        ],
+        "kontraindikationen": [
+            "Überempfindlichkeit gegenüber Opioiden oder sonstigen Bestandteilen",
+            "fehlende Möglichkeit zur Beatmung",
+            "erhöhter intrakranialer Druck (SHT) (ohne Möglichkeit zur Beatmung)",
+            "Hypovolämie und Hypotension",
+            "Myasthenia Gravis",
+            "Epilepsie",
+            "Gallen-und Uretherkoliken"
+        ],
+        "auswirkungen": [
+            "Schmerzlinderung",
+            "verminderte Atmung",
+            "verminderte Herzfrequenz und Blutdruck",
+            "Sedierung und Schläfrigkeit",
+            "verminderte Wachsamkeit und Konzentration",
+            "Übelkeit und Erbrechen"
+        ],
+        "nebenwirkungen": [
+            "Atemdepression",
+            "Atemstillstand",
+            "Bewusstlosigkeit",
+            "Übelkeit, Erbrechen",
+            "Muskelsteifigkeit und Muskelkrämpfe",
+            "Herzrhythmusstörungen (v.a. Bradykardie), Blutdruckschwankungen",
+            "Schüttelfrost, Hypothermie",
+            "Bronchospasmus",
+            "Sedierung, Verwirrtheit, Krampfanfall",
+            "allergische Reaktionen (Freisetzung von Histamin!)"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Glucose",
+        "wirkstoffe": [
+            "Kohlehydrat (Zucker)"
+        ],
+        "indikationen": [
+            "Hypoglykämie"
+        ],
+        "kontraindikationen": [
+            "keine"
+        ],
+        "auswirkungen": [
+            "Erhöhung des Blutzuckerspiegels",
+            "Erhöhung der Energieversorgung des Körpers",
+            "Unterstützung der Gehirnfunktion",
+            "Verbesserung der Muskel- und Nervenfunktion",
+            "Reduzierung von Müdigkeit und Erschöpfung"
+        ],
+        "nebenwirkungen": [
+            "Venenreizung",
+            "Nekrose bei Paravasat"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Heparin",
+        "wirkstoffe": [
+            "Antikoagulans"
+        ],
+        "indikationen": [
+            "Thromboembolisches Geschehen"
+        ],
+        "kontraindikationen": [
+            "Überempfindlichkeit gegen den Wirkstoff oder sonstige Bestandteile",
+            "HIT-Anamnese (heparininduzierte Thrombozytopenie Typ 2)",
+            "hämorrhagischen Diathesen (z.B. Hämophilie, Thrombozytopenie)",
+            "Blutungen im Gastrointestinaltrakt, in der Lunge, der Niere ",
+            "akute intrakranielle Blutungen (Trauma, SHT)",
+            "schwere Erkrankungen von Leber, Pankreas oder Niere",
+            "Erkrankungen, bei denen der Verdacht einer Läsion des Gefäßsystems "
+        ],
+        "auswirkungen": [
+            "verminderte Blutgerinnung",
+            "verminderte Thrombosegefahr",
+            "vermindertes Risiko von Herzinfarkt und Schlaganfall",
+            "geringere Bildung von Blutgerinnseln in Venen und Arterien",
+            "verringerte Gefahr von Lungenembolien",
+            "geringere Bildung von Blutgerinnseln während Operationen"
+        ],
+        "nebenwirkungen": [
+            "erhöhte Blutungsbereitschaft",
+            "allergische Reaktion u.a. Exantheme",
+            "Bronchospasmus",
+            "Blutdruckabfall",
+            "Hautnekrosen",
+            "Thrombozytopenie mit und ohne Thromben"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Lidocain",
+        "wirkstoffe": [
+            "Lokalanästhetikum",
+            "Antiarrhythmikum"
+        ],
+        "indikationen": [
+            "Vorbeugung und Behandlung von lokalen Schmerzen",
+            "Behandlung von Herzrhythmusstörungen"
+        ],
+        "kontraindikationen": [
+            "Überempfindlichkeit gegen den Wirkstoff oder sonstige Bestandteile oder andere Lokalanästhetika",
+            "hochgradige Formen der Bradykardie (AV-Block II° und III°)",
+            "Hypotonie, dekompensierte Herzinsuffizienz",
+            "kardiogener oder hypovolämischer Schock",
+            "frischer Herzinfarkt",
+            "Sick-Sinus-Syndrom"
+        ],
+        "auswirkungen": [
+            "Lokalanästhetikum",
+            "Verminderte Erregbarkeit der Nervenzellen",
+            "Hemmung der Reizweiterleitung im Herzmuskel",
+            "Senkung des Blutdrucks",
+            "Reduktion von Herzrhythmusstörungen",
+            "Linderung von Schmerzen und Juckreiz"
+        ],
+        "nebenwirkungen": [
+            "Bradykardie",
+            "Blutdruckschwankungen (Hypo- und Hypertonie!)",
+            "kardiale Arrhythmien",
+            "Schwindel",
+            "Benommenheit",
+            "Sehstörungen",
+            "Tremor",
+            "Parästhesien",
+            "Krampfanfälle",
+            "Übelkeit und Erbrechen"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Morphin",
+        "wirkstoffe": [
+            "Opioid-Analgetikum"
+        ],
+        "indikationen": [
+            "starke Schmerzen"
+        ],
+        "kontraindikationen": [
+            "Überempfindlichkeit gegen den Wirkstoff oder sonstige Bestandteile",
+            "Atemdepression",
+            "paralytischer Ileus",
+            "schwere chronisch obstruktive Atemwegserkrankung",
+            "zerebrale Krampfanfälle ",
+            "akutes Abdomen",
+            "akute Lebererkrankung",
+            "schwere Schädel-Hirn-Traumen, erhöhter Hirndruck",
+            "Säuglinge < 6 Monate ",
+            "Koliken im Magen-Darm-Trakt oder Urogenitaltrakt",
+            "Schwere Hypotonie"
+        ],
+        "auswirkungen": [
+            "Schmerzlinderung",
+            "Müdigkeit und Schläfrigkeit",
+            "Euphorie",
+            "Verringerung der Atemfrequenz",
+            "Verstopfung",
+            "Übelkeit und Erbrechen"
+        ],
+        "nebenwirkungen": [
+            "Atemdepression",
+            "Atemstillstand",
+            "Bewusstlosigkeit",
+            "Hypotonie, Schwindel, Herzklopfen",
+            "Übelkeit, Erbrechen, Kopfschmerzen, Benommenheit",
+            "anaphylaktische Reaktionen, Miosis ",
+            "Bronchospasmus, Flush",
+            "zerebraler Krampfanfall (insbesondere bei Kindern bei hoher Dosierung)"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Naloxon",
+        "wirkstoffe": [
+            "Antidot",
+            "Opiat-Antagonist"
+        ],
+        "indikationen": [
+            "akute Opiat-Intoxikation oder -Überdosierung mit Atemdepression"
+        ],
+        "kontraindikationen": [
+            "Überempfindlichkeit gegen den Wirkstoff oder sonstige Bestandteile"
+        ],
+        "auswirkungen": [
+            "Aufhebung der Atemdepression",
+            "Senkung des Blutdrucks",
+            "Linderung von Schmerzen",
+            "Erhöhung der Herzfrequenz",
+            "Erhöhung der Atemfrequenz",
+            "Erhöhung des Bewusstseins"
+        ],
+        "nebenwirkungen": [
+            "Übelkeit, Erbrechen",
+            "Rebound-Phänomen",
+            "Hypertonie",
+            "Herzrhythmusstörungen",
+            "neurologische Symptome (Kopfschmerzen, Schwindel, Tremor, Schwitzen, Benommenheit)"
+        ],
+        "verabreichung": "Injektion"
+    },
+    {
+        "name": "Salbutamol+Ipratropiumbromid",
+        "wirkstoffe": [
+            "Broncholytikum",
+            "β2-Sympathomimetikum + Anticholinergikum"
+        ],
+        "indikationen": [
+            "Obstruktion der unteren Atemwege ( Asthma Bronchiale, COPD)"
+        ],
+        "kontraindikationen": [
+            "bekannte Unverträglichkeit gegen die Wirkstoffe oder Atropin oder ähnliche Substanzen (andere Anticholinergika bzw. andere beta-Sympathomimetika)",
+            "Tachykarde Herzrhythmusstörungen (v.a Tachyarrhythmien) mit Frequenz über 140x/min",
+            "Alter unter 18a"
+        ],
+        "auswirkungen": [
+            "erweiterte Atemwege",
+            "verringerte Schleimproduktion",
+            "erhöhte Sauerstoffaufnahme",
+            "erhöhte Atemfrequenz",
+            "verringerte Atemnot",
+            "verringerte Bronchialobstruktion"
+        ],
+        "nebenwirkungen": [
+            "Herzklopfen, Herzstolpern, Tachykardie",
+            "Blutdruckabfall bis Blutdrucksteigerung",
+            "AP-ähnliche Beschwerden, Palpitationen",
+            "Unruhe, Schwindel, Kopfschmerzen und Tremor"
+        ],
+        "verabreichung": "Injektion"
+    }
+]
